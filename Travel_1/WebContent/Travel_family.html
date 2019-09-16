@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<meta name="viewport" content="width=device-width,inital-scale=1">
+<link rel="stylesheet" href="./css/Travel_css.css?ver=2">
+<script src="./js/jquery-3.4.1.min.js"></script>
+<title>Travel list</title>
+<script type="text/javascript">
+$(document).ready(function(){
+    var imgs;
+    var img_count;
+    var img_position = 1;
+
+    imgs = $(".slide ul");
+    img_count = imgs.children().length;
+
+    //버튼을 클릭했을 때 함수 실행
+    $('#back').click(function () {
+      back();
+    });
+    $('#next').click(function () {
+      next();
+    });
+
+    function back() {
+      if(1<img_position){
+        imgs.animate({
+          left:'+=1000px'
+        });
+        img_position--;
+      }
+    }
+    function next() {
+      if(img_count>img_position){
+        imgs.animate({
+          left:'-=900px'
+        });
+        img_position++;
+      }
+    }
+  });
+</script>
+</head>
+<body>
+
+<header>
+  <h2>Travel list</h2>
+</header>
+
+<section>
+	<nav>
+		<ul class="main_menu">
+		 	<li class="li1"><a href="Travel_main.html">홈페이지</a></li>
+			<li class="li1"> 국내 여행 
+				<ul class="sub_menu">
+					<li><a href="Travel_family.html"> 가족 여행</a></li>
+					<li><a href="Travel_couple.html"> 커플 여행</a></li>
+				</ul>
+			</li>
+			
+			<li class="li1"> 해외 여행 
+				<ul class="sub_menu">
+					<li><a href="Travel_europe.html"> 유럽 여행</a></li>
+					<li><a href="Travel_SouthEast.html"> 동남아 여행</a></li>
+				</ul>
+			</li>
+			
+			<li class="li1"> 로그인 
+				<ul class="sub_menu" >
+					<li><a href="login.html"> 로그인</a></li>
+					<li><a href="user.html"> 회원가입</a></li>
+				</ul>
+			</li>
+		
+		</ul>
+	</nav>
+  
+  <article>
+  	<div class="slide">
+      <img id="back" src="./img/왼쪽.jpg" alt="" width="40px">
+      <ul>
+        <li><a href="http://sanaetour.com/221537417964" target="_blank"><img class="img1" src="./img/아침고요수목원.jpg" alt="" width="60%"></a></li>
+		<li><a href="http://blog.daum.net/e-chungnam/5602" target="_blank"><img class="img2" src="./img/안면도자연휴양림.jpg" alt="" width="75%"></a></li>
+		<li><a href="https://blog.naver.com/hyr67/221555290345" target="_blank"><img class="img3" src="./img/원대리 자작나무 숲.jpg" alt="" width="50%"></a></li>
+      </ul>
+      <img id="next" src="./img/오른쪽.jpg" alt="" width="40px">
+      <div class="text">자세한 내용은 사진 클릭!</div>
+    </div>
+  </article>
+</section>
+
+<footer>
+  <p>Test 실습용 입니다.</p>
+</footer>
+
+</body>
+</html>

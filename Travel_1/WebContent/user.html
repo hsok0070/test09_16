@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>user table</title>
+<link rel="stylesheet" href="./css/table.css?ver=1">
+</head>
+<body>
+<h5 style="text-align: center;">Sign up</h5>
+<form action="adduser.jsp" method="get">
+<table border = "1">
+
+<tr>
+   <td> <label for="id"> id </label> </td>
+   <td> <input type="text" id="id" name="id" value="" /> </td>
+</tr>
+
+<tr>
+   <td> <label for="pw"> pw </label> </td>
+   <td> <input type="password" id="pw" name="pw" value="" /> </td>
+</tr>
+
+<tr>
+   <td> <label for="name"> name </label> </td>
+   <td> <input type="text" id="name" name="name" value="" /> </td>
+</tr>
+
+<tr>
+   <td> <label for="role"> role </label> </td>
+   <td colspan="2"> <input type="radio" id="role" name="role" value="admin" /> admin 
+ 					 <input type="radio" id="role" name="role" value="user" /> user 
+ 	</td>
+   <hr><hr>
+</tr>
+
+<tr>
+ <td colspan="2">
+ <input type="submit" value="회원가입">
+ <input type="reset" value="취소">
+</td>
+</tr>
+
+
+</body>
+</html>
